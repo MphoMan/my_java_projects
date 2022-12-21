@@ -5,7 +5,7 @@ public class quadratic {
 
 	public static void main(String[] args) {
 		
-		System.out.println("This is the program used to solve quadratic or hyperpolar problem\n ");
+		System.out.println("***************************************This is the program used to solve quadratic or hyperpolar problem***************************************\n ");
 		
 		Scanner allowUser = new Scanner(System.in);
 		
@@ -18,7 +18,16 @@ public class quadratic {
 		System.out.println("Enter the value/coefficient of c:");
 		int c = allowUser.nextInt();
 		
+		System.out.println("Your equation is y= "+ a*a+ "x^2 + "+ b*a +"x"+" + "+ c*a +"\n");
+		System.out.println("If coefficient a of a is not equal to 1, then we divide the equation with value of a.\n");
+		
+		
+		if(a>=2) {
+			quadraticSolution(a/a,b/a,c/a);			
+		}
+		else {
 		quadraticSolution(a,b, c);
+		}
 		
 
 	}
@@ -27,6 +36,7 @@ public class quadratic {
 		
 		
 		System.out.println("Your equation is y= "+ a+ "x^2 + "+ b +"x"+" + "+ c +"\n");
+		
 		
 		System.out.println("Y-Intercept, When x = 0\n");
 		int cont = a*(int)Math.pow(0, 2) + b*0 + c;
@@ -45,7 +55,7 @@ public class quadratic {
 		System.out.println(a+"x^2 + "+ b +"x"+ " + "+ c+ " =0\n");
 		int x1 = (-b + (int)Math.sqrt((int)Math.pow(b, 2)- 4*a*c ))/2;
 		System.out.println("The value of x1="+ x1);
-		int x2 = (-b - (int)Math.sqrt((int)Math.pow(b, 2)- 4*a*c ))/2;
+		int x2 = (-b - (int)Math.sqrt((int)Math.pow(b, 2)+ 4*a*c ))/2;
 		System.out.println("The value of x2="+ x2);
 		
 		System.out.println("The values of X-Intercepts are as follow:");
